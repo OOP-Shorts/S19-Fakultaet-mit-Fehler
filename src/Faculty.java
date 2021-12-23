@@ -12,9 +12,12 @@ public class Faculty {
         if(n == 0 || n == 1) {
             return 1;
         }
-        long faculty = 0;
+        // Wenn der Startwert von faculty 0 ist, so ist jede Multiplikation mit diesem Wert wieder 0.
+        long faculty = 1;
 
-        for (int i = n; i >= 0; i++) {
+        // Wenn die Zahl i in jedem Durchgang der for-Schleife hoch statt runter gezählt wird, endet die Schleife nie
+        // Wenn i bis >= 0 runtergezählt wird, wird i in einem Durchgang auch 0. Somit ist das Ergebnis durch die Multiplikation immer 0.
+        for (int i = n; i > 0; i--) {
             faculty = faculty * i;
         }
 
